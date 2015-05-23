@@ -5,13 +5,13 @@ var gutil = require('gulp-util');
 var join = require('path').join;
 var removeHtmlComments = require('../');
 
-it('should remove comments in html', function (cb) {
+it('should remove comments in html', function(cb) {
   var fixture = fs.readFileSync(join(__dirname, 'fixture.html'));
   var expected = fs.readFileSync(join(__dirname, 'expected.html'), 'utf8');
 
   var stream = removeHtmlComments();
 
-  stream.on('data', function (file) {
+  stream.on('data', function(file) {
     assert.equal(file.contents.toString(), expected);
   });
 
