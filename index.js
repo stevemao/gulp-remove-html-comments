@@ -33,7 +33,7 @@ module.exports = function(opts) {
         gutil.log(chalk.red(comment) + chalk.magenta('removed'));
       });
 
-      gutil.log(chalk.red('✖ ') + removedCount + ' comments removed.');
+      gutil.log(file.path + ': ' + chalk.red('✖ ') + removedCount + ' comments removed.');
     }
 
     cb(null, file);

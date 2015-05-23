@@ -19,8 +19,8 @@ it('should remove comments in html', function (cb) {
 
   stream.write(new gutil.File({
     cwd: __dirname,
-    base: __dirname + '/fixture',
-    path: __dirname + '/fixture/fixture.css',
+    base: __dirname,
+    path: join(__dirname, 'fixture.html'),
     contents: fixture
   }));
 
